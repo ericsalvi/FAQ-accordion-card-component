@@ -154,9 +154,14 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: .8rem;
+  position: relative;
 }
 .faq__item input[name=faq] {
-  display: none;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  top: 16px;
+  width: 1px;
 }
 .faq__item label {
   -webkit-box-align: center;
