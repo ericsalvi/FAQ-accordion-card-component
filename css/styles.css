@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+  font-size: 12px;
+  --primary-color: hsl(238, 29%, 16%);
+  --very-dark-blue: hsl(237, 12%, 33%);
+  --dark-blue: hsl(240, 6%, 50%);
+  --hover-color: hsl(14, 88%, 65%);
+  --divider: hsl(240, 5%, 91%);
+  --gradient-from: hsl(273, 75%, 66%);
+  --gradient-to: hsl(240, 73%, 65%);
+}
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--gradient-from)), to(var(--gradient-to)));
+  background: -o-linear-gradient(var(--gradient-from), var(--gradient-to));
+  background: linear-gradient(var(--gradient-from), var(--gradient-to));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100vh;
+  padding: 0 24px;
+}
+h1 {
+  color: var(--primary-color);
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-top: 0;
+  text-align: center;
+}
+main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 32px;
+  min-height: calc(100vh - 100px);
+}
+.faq {
+  background: white;
+  border-radius: 22px;
+  -webkit-box-shadow: 0 60px 65px -25px rgba(0,0,0,0.35);
+          box-shadow: 0 60px 65px -25px rgba(0,0,0,0.35);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 500px;
+  position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 1100px) {
+  h1 {
+    text-align: left;
+  }
+  .faq {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 920px;
+    min-height: 508px;
+    width: unset;
+  }
+  .faq > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+  }
+  .faq__image.desktop {
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-position: 115% 68%;
+    background-repeat: no-repeat;
+    background-size: 205%;
+    display: block;
+    overflow: hidden;
+  }
+  .mobile {
+    display: none;
+  }
+  .faq__image-desktop {
+    left: -85px;
+    position: relative;
+    top: 70px;
+  }
+  .faq__image-box {
+    left: -93px;
+    filter: drop-shadow( 0 18px 10px rgba(0, 0, 0, .3));
+    -webkit-filter: drop-shadow( 0 18px 10px rgba(0, 0, 0, .3));
+    position: absolute;
+    top: 204px;
+  }
+  article.faq__content {
+    margin-top: 0;
+    padding: 70px 95px 18px 15px;
+  }
+  .faq__item {
+    min-width: 350px;
+  }
+  article .faq__item label {
+    font-size: 1.18rem;
+  }
+  article .faq__item label::after {
+    padding-right: 20px;
+  }
+  article .faq__item input:checked + label::after {
+    margin-right: 13px;
+  }
+}
+.desktop {
+  display: none;
+}
+.faq__image.mobile {
+  background-image: url('../images/bg-pattern-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  height: 110px;
+}
+.faq__image-mobile {
+  position: absolute;
+  margin-top: -107px;
+  left: calc(50% - 145px);
+}
+.faq__content {
+  margin-top: 30px;
+  padding: 0 20px 50px 25px;
+}
+.faq__item {
+  border-bottom: 1px solid var(--divider);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: .8rem;
+}
+.faq__item input[name=faq] {
+  display: none;
+}
+.faq__item label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--very-dark-blue);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.1rem;
+  padding: 16px 0;
+}
+.faq__item label:hover {
+  color: var(--hover-color);
+}
+.faq__item label::after {
+  background-image: url('../images/icon-arrow-down.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent;
+  content: "E";
+  font-size: 0.6rem;
+  margin-left: auto;
+  padding-right: 10px;
+}
+.faq__item input:checked + label {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.faq__item input:checked + label::after {
+  margin-right: 3px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.faq__item p {
+  color: var(--dark-blue);
+  display: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-right: 30px;
+  margin-top: 0;
+}
+input[name=faq]:checked ~ p {
+  display: inline-block;
+}
+footer {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 35px;
+  letter-spacing: 0.09rem;
+  padding-top: 7px;
+  text-align: center; 
+  width: 100%;
+}
+footer a {
+  color: white;
+  font-size: inherit;
+}
