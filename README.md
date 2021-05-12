@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/dynamic-faq-accordion-card-using-absolutely-no-javascript-cBwcop7j9)
+- Live Site URL: [https://ericsalvi.github.io/FAQ-accordion-card-component/](https://ericsalvi.github.io/FAQ-accordion-card-component/)
 
 ## My process
 
